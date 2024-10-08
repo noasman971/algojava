@@ -17,6 +17,28 @@ public class Main {
     }
 
 
+    public static int plus_grand(int[] tableau){
+        int nbr = 0;
+        for (int i = 0; i < tableau.length; i++) {
+            if (tableau[i] > tableau[0]){
+                    nbr = tableau[i];
+            }
+
+        }
+        return nbr;
+    }
+
+
+    public static boolean moins_10(int[] tableau){
+        for (int i = 0; i < tableau.length; i++) {
+            if (tableau[i] < 10){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 
     public static void main(String[] args) {
 
@@ -36,14 +58,14 @@ public class Main {
 
         float moy = num/denom;
         System.out.println(" ");
-        System.out.println(num);
-        System.out.println(denom);
-        System.out.println(moy);
+        System.out.println("Le numérateur est : " +num);
+        System.out.println("Le dénominateur est : " +denom);
+        System.out.println("La moyenne est : " + moy);
 
 
         System.out.println(afficher_tab(score));
-
-
+        System.out.println(plus_grand(score));
+        System.out.println(moins_10(score));
 
         }
     }
