@@ -3,6 +3,10 @@
 
 public class Main {
 
+    /**
+     * @param tableau une liste de int utilisé dans afficher_tab
+     * @return l'affichage de la liste
+     */
     public static String afficher_tab(int[] tableau){
         int[] tab = new int[tableau.length];
         String tae ="";
@@ -16,7 +20,10 @@ public class Main {
         return tae;
     }
 
-
+    /**
+     * @param tableau une liste de int utilisé dans plus_grand
+     * @return l'élément le plus grand de la liste
+     */
     public static int plus_grand(int[] tableau){
         int nbr = 0;
         for (int i = 0; i < tableau.length; i++) {
@@ -28,7 +35,10 @@ public class Main {
         return nbr;
     }
 
-
+    /**
+     * @param tableau une liste de int utilisé dans moins_10
+     * @return vrai si un élément est plus petit que 10
+     */
     public static boolean moins_10(int[] tableau){
         for (int i = 0; i < tableau.length; i++) {
             if (tableau[i] < 10){
@@ -37,6 +47,31 @@ public class Main {
         }
         return false;
     }
+
+    /**
+     *
+     * @param tableau une liste de int triée utilisé dans recherche_binaire
+     * @param element un int utilisé dans recherche_binaire
+     * @return l'indice ou se trouve l'élément et si il n'y est pas renvoie -1
+     */
+    public static int recherche_binaire(int[] tableau, int element){
+        for (int i = 0; i < tableau.length; i++) {
+            if (tableau[i] == element){
+                return i;
+            }
+
+        }
+
+        return -1;
+    }
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +101,8 @@ public class Main {
         System.out.println(afficher_tab(score));
         System.out.println(plus_grand(score));
         System.out.println(moins_10(score));
+        System.out.println(recherche_binaire(score, 10));
+
 
         }
     }
